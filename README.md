@@ -4,10 +4,10 @@
 👉 https://app.powerbi.com/view?r=eyJrIjoiZTcyZjcwYmUtZWYyNy00YmFhLWJjYWMtNjJmM2Q2YmExYjIxIiwidCI6Ijc3MDI2YzQzLTFmNWMtNDEyYy1iNjg1LTJkNTM4Y2Q4NWIzMCIsImMiOjR9
 
 ### - Ver Tabla de Medidas en DAX
-👉 
+👉 https://github.com/Rubis-Becerra/Dashboard-y-Presentacion-Analisis-de-Ventas-y-Facturacion/blob/main/Dasboard_Analisis_Ventas.SemanticModel/definition/tables/Tabla%20Medidas.tmdl
 
 ### - Ver Presentación Ejecutiva en PowerPoint 
-👉 
+👉 https://github.com/Rubis-Becerra/Dashboard-y-Presentacion-Analisis-de-Ventas-y-Facturacion/blob/main/Presentacion_Analisis_Ventas.pptx
 
 ---
 
