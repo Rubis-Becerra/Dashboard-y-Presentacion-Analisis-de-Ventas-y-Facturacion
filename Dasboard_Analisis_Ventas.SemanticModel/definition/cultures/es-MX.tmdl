@@ -1,0 +1,2008 @@
+cultureInfo es-MX
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "BD_venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "BD venta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BD_Ventas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.tipo_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "tipo_cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.pais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "pais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pais": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "País": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "BD_venta.nombre_producto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "nombre_producto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nombre producto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nombre_producto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Producto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.valor_total_qtdxpu": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "valor_total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_total": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "valor aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "valor overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.monto_descuento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "descuento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descuento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.costo_total_pu": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "costo_total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "costo_total": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "costo aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "costo overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.utilidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "utilidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.fecha_venta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "fecha_venta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha venta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha_venta": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimCalendario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "mes_num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_nomb": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "mes_nomb"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nomb": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nomb": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_nomb": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tabla medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.valortotal_con_descuento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas",
+			          "ConceptualProperty": "sum_fact_liquida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sum fact liquida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sum_fact_liquida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "summation fact liquida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "aggregation fact liquida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "total fact liquida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "aggregate fact liquida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "amount fact liquida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Facturación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Fact. Líquida": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.sum_costo_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas",
+			          "ConceptualProperty": "sum_costo_total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sum costo total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sum_costo_total": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sum costo aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "sum costo overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "summation costo total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "aggregation costo total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "total costo total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "aggregate costo total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "amount costo total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Costo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.margen_beneficio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas",
+			          "ConceptualProperty": "lucro%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lucro%": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lucro percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "lucro pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Margen%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Margen": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.ctd_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas",
+			          "ConceptualProperty": "sum_descuento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sum descuento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sum_descuento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "summation descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "aggregation descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "total descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "aggregate descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "amount descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.promedio_ingreso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas",
+			          "ConceptualProperty": "fact_media"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact media": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact_media": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "media": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fact television": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "fact radio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "fact broadcasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "television": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "radio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "broadcasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fact vehicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "fact mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "fact method": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "fact avenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "BD_venta.valor_total_c_descuento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "BD_Ventas",
+			          "ConceptualProperty": "valor_total_c_descuento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor total c descuento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_total_c_descuento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "valor aggregate c descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "valor overall c descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "mes_año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me año": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes_año": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Período": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.sum_util_lucro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Medidas",
+			          "ConceptualProperty": "sum_util_lucro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sum util lucro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sum_util_lucro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "summation util lucro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "aggregation util lucro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "total util lucro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "aggregate util lucro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "amount util lucro": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "Lucro": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ganancia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "BD_venta_has_tabla_medida_ctd_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "tabla_medida.ctd_ventas": {
+			          "Target": {
+			            "Entity": "tabla_medida.ctd_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.ctd_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_sum_descuento"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_tabla_medida_margen_beneficio": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "tabla_medida.margen_beneficio": {
+			          "Target": {
+			            "Entity": "tabla_medida.margen_beneficio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.margen_beneficio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_lucro"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_tabla_medida_sum_costo_total": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "tabla_medida.sum_costo_total": {
+			          "Target": {
+			            "Entity": "tabla_medida.sum_costo_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.sum_costo_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_sum_costo_total"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_tabla_medida_valortotal_con_descuento": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "tabla_medida.valortotal_con_descuento": {
+			          "Target": {
+			            "Entity": "tabla_medida.valortotal_con_descuento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.valortotal_con_descuento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_sum_fact_liquida"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.año": {
+			          "Target": {
+			            "Entity": "dim_calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_nomb": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_nomb": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_nomb"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_nomb"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_nombs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_num": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_num": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_nums"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dias"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.fecha": {
+			          "Target": {
+			            "Entity": "dim_calendario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_fecha_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.fecha_venta": {
+			          "Target": {
+			            "Entity": "BD_venta.fecha_venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.fecha_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_fecha_ventas"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_utilidad": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.utilidad": {
+			          "Target": {
+			            "Entity": "BD_venta.utilidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.utilidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_utilidads"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "BD_venta.utilidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "utilidad_indicates_how_expensive_BD_ventas_are"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_costo_total_pu": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.costo_total_pu": {
+			          "Target": {
+			            "Entity": "BD_venta.costo_total_pu"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.costo_total_pu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_costo_totals"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "BD_venta.costo_total_pu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "costo_total_indicates_how_expensive_BD_ventas_are"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_monto_descuento": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.monto_descuento": {
+			          "Target": {
+			            "Entity": "BD_venta.monto_descuento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.monto_descuento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_descuentos"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "BD_venta.monto_descuento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "descuento_indicates_how_expensive_BD_ventas_are"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_valor_total_qtdxpu": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.valor_total_qtdxpu": {
+			          "Target": {
+			            "Entity": "BD_venta.valor_total_qtdxpu"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.valor_total_qtdxpu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_valor_totals"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "BD_venta.valor_total_qtdxpu"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valor_total_indicates_how_expensive_BD_ventas_are"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_nombre_producto": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.nombre_producto": {
+			          "Target": {
+			            "Entity": "BD_venta.nombre_producto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.nombre_producto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_nombre_productos"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_pais": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.pais": {
+			          "Target": {
+			            "Entity": "BD_venta.pais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.pais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_paises"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_tipo_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.tipo_cliente": {
+			          "Target": {
+			            "Entity": "BD_venta.tipo_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.tipo_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_tipo_clientes"
+			        }
+			      ]
+			    },
+			    "BD_venta_in_pais": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.pais": {
+			          "Target": {
+			            "Entity": "BD_venta.pais"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "BD_venta.pais"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "BD_venta.pais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_are_in_paises"
+			        }
+			      ]
+			    },
+			    "BD_venta_is_expensive4": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "BD_venta.valor_total_c_descuento": {
+			          "Target": {
+			            "Entity": "BD_venta.valor_total_c_descuento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "BD_venta.valor_total_c_descuento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "valor_total_c_descuento_indicates_how_expensive_BD_ventas_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "BD_venta.valor_total_c_descuento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_valor_total_c_descuentos"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_tabla_medida_promedio_ingreso": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "tabla_medida.promedio_ingreso": {
+			          "Target": {
+			            "Entity": "tabla_medida.promedio_ingreso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.promedio_ingreso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_fact_media"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_año": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_año": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_años"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_tabla_medida_sum_util_lucro": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "tabla_medida.sum_util_lucro": {
+			          "Target": {
+			            "Entity": "tabla_medida.sum_util_lucro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.sum_util_lucro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_sum_util_lucro"
+			        }
+			      ]
+			    },
+			    "BD_venta_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "BD_Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "BD_venta": {
+			          "Target": {
+			            "Entity": "BD_venta"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "BD_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "BD_ventas_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "BD_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_BD_ventas"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.0.0"
+			    }
+			  }
+			}
+		contentType: json
+

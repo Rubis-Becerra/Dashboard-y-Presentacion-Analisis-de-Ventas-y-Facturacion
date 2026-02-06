@@ -1,0 +1,79 @@
+table DimCalendario
+	lineageTag: 00cfcbc6-db3d-4c85-8657-5936889a8501
+
+	column fecha
+		formatString: dd/mm/yyyy
+		lineageTag: b9e34f78-ff2b-4c26-8a59-d0a7965a83b2
+		summarizeBy: none
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column dia =
+			DAY(
+			    DimCalendario[fecha]
+			    )
+		formatString: 0
+		lineageTag: 8e27c820-016c-4e94-a89a-3362cb1ff927
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_num =
+			MONTH(
+			    DimCalendario[fecha]
+			)
+		formatString: 0
+		lineageTag: 2de8a68c-5ec4-40f3-91c1-cd1ad96875a1
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_nomb =
+			FORMAT(
+			    DimCalendario[fecha], "mmm"
+			)
+		dataType: string
+		lineageTag: ed2c67c7-a76b-415f-a90c-b1dd198f6440
+		summarizeBy: none
+		sortByColumn: mes_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column año =
+			YEAR(
+			    DimCalendario[fecha]
+			)
+		formatString: 0
+		lineageTag: 342966b0-8481-40f3-86c2-6c46f27b2a0d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes_año =
+			
+			FORMAT(
+			    DimCalendario[fecha],
+			    "mmm-yy"
+			)
+		lineageTag: 4416f410-c811-46df-8507-ecec9054e401
+		summarizeBy: none
+		sortByColumn: año
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCalendario = calculated
+		mode: import
+		source =
+				
+				CALENDAR(
+				    MIN(BD_Ventas[fecha_venta]),
+				    MAX(BD_Ventas[fecha_venta])
+				)
+
+	annotation PBI_Id = 18e659ff2a114bf1aba4875f693906bf
+

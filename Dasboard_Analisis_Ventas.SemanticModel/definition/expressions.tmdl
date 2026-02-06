@@ -1,0 +1,33 @@
+expression BD =
+		let
+		    Origen = Excel.Workbook(File.Contents("C:\Users\LENOVO\OneDrive\Documentos\Cursos Rubis\Rubis Master PBi\BC1_FPOWERBI\BC-Fundamentos_PowerBI\Desafio\AnÔÇálisis de ventas.xlsx"), null, true),
+		    BD_Sheet = Origen{[Item="BD",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(BD_Sheet, [PromoteAllScalars=true]),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Tipos de Clientes", type text}, {"País", type text}, {"Produto", type text}, {"Valor Total", type number}, {"Descuento", type number}, {"Valor Total c/ Descuento", type number}, {"Costo Total", type number}, {"Utilidad", type number}, {"Fecha", type date}, {"Mes", type text}, {"Año", Int64.Type}}),
+		    #"Valor reemplazado" = Table.ReplaceValue(#"Tipo cambiado",#date(2023, 1, 1),#date(2025, 1, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado",#date(2023, 6, 1),#date(2025, 6, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1",#date(2023, 12, 1),#date(2025, 12, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2",#date(2023, 3, 1),#date(2025, 3, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3",#date(2023, 7, 1),#date(2025, 7, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4",#date(2023, 8, 1),#date(2025, 8, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado6" = Table.ReplaceValue(#"Valor reemplazado5",#date(2023, 9, 1),#date(2025, 9, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado7" = Table.ReplaceValue(#"Valor reemplazado6",#date(2022, 10, 1),#date(2024, 10, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado8" = Table.ReplaceValue(#"Valor reemplazado7",#date(2023, 2, 1),#date(2025, 2, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado9" = Table.ReplaceValue(#"Valor reemplazado8",#date(2022, 9, 1),#date(2024, 9, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado10" = Table.ReplaceValue(#"Valor reemplazado9",#date(2023, 10, 1),#date(2025, 10, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado11" = Table.ReplaceValue(#"Valor reemplazado10",#date(2022, 11, 1),#date(2024, 11, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado12" = Table.ReplaceValue(#"Valor reemplazado11",#date(2022, 12, 1),#date(2024, 12, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Filas filtradas" = Table.SelectRows(#"Valor reemplazado12", each true),
+		    #"Valor reemplazado13" = Table.ReplaceValue(#"Filas filtradas",#date(2023, 4, 1),#date(2025, 4, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado14" = Table.ReplaceValue(#"Valor reemplazado13",#date(2023, 5, 1),#date(2025, 5, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Valor reemplazado15" = Table.ReplaceValue(#"Valor reemplazado14",#date(2023, 11, 1),#date(2025, 11, 1),Replacer.ReplaceValue,{"Fecha"}),
+		    #"Filas filtradas1" = Table.SelectRows(#"Valor reemplazado15", each true)
+		in
+		    #"Filas filtradas1"
+	lineageTag: de9df4c3-2e73-4831-bcf1-29de85cc043d
+	queryGroup: Consultas
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

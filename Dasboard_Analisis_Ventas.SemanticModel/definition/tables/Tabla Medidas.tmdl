@@ -1,0 +1,77 @@
+table 'Tabla Medidas'
+	lineageTag: cc1c0aa1-1558-4f91-9ba1-903e7186dfdc
+
+	measure sum_fact_liquida = ```
+			
+			 SUM(
+			    BD_Ventas[valor_total_c_descuento]
+			 )
+			```
+		formatString: \$#,0;-\$#,0;\$#,0
+		lineageTag: 31ee6207-fa24-472c-b211-65258da04b7d
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure sum_costo_total =
+			
+			SUM(
+			    BD_Ventas[costo_total]
+			)
+		formatString: \$#,0;-\$#,0;\$#,0
+		lineageTag: b5e271d7-51a3-46ce-a1a5-1d0e18f9bdee
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure lucro% =
+			
+			DIVIDE(
+			    [sum_util_lucro],[sum_fact_liquida]
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 2143f1c6-966d-4a9a-bd2c-8e1d01d103e2
+
+	measure sum_descuento =
+			
+			SUM(
+			   BD_Ventas[descuento]
+			)
+		formatString: \$#,0.0;-\$#,0.0;\$#,0.0
+		lineageTag: 3ae08191-9288-4518-9518-b55e445f32d4
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure fact_media =
+			
+			DIVIDE(
+			    [sum_fact_liquida],
+			    DISTINCTCOUNT(BD_Ventas[fecha_venta]
+			    ))
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 6c86bf18-e18a-4fdb-a977-0f1608ec5bd9
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	measure sum_util_lucro =
+			
+			SUM(
+			    BD_Ventas[utilidad]
+			)
+		formatString: \$#,0;-\$#,0;\$#,0
+		lineageTag: 8f530e96-c814-4f40-9438-ebce896f0805
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	partition 'Tabla Medidas' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

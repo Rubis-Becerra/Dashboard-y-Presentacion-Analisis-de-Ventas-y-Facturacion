@@ -1,0 +1,164 @@
+table BD_Ventas
+	lineageTag: a7854241-d140-4444-b655-5b556e1a5bf7
+
+	column tipo_cliente
+		dataType: string
+		lineageTag: 7b963c84-462e-4524-9b2f-fa3b60a9cd03
+		summarizeBy: none
+		sourceColumn: tipo_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column pais
+		dataType: string
+		lineageTag: 0e4e280b-4b35-4424-9f0a-7f2e4b50e412
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_producto
+		dataType: string
+		lineageTag: 75edb608-3164-4d91-85c9-8527a53142cb
+		summarizeBy: none
+		sourceColumn: nombre_producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_total
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 8c90db2b-aa8b-46f5-a2d4-79c191a6ea62
+		summarizeBy: sum
+		sourceColumn: valor_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	column descuento
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: dec76bfc-a10e-403e-97ad-fe9ea9b65d16
+		summarizeBy: sum
+		sourceColumn: descuento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	column costo_total
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: fe910de9-3696-4635-9d4a-1749fcd69743
+		summarizeBy: sum
+		sourceColumn: costo_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	column utilidad
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 87b47179-5ef2-41ec-a4e7-f35d2c60709a
+		summarizeBy: sum
+		sourceColumn: utilidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	column fecha_venta
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: cc8bad84-a6aa-433d-8ca4-08b66e8c3fbc
+		summarizeBy: none
+		sourceColumn: fecha_venta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column valor_total_c_descuento
+		dataType: decimal
+		formatString: \$#,0.###############;-\$#,0.###############;\$#,0.###############
+		lineageTag: 0005a557-5b89-42ad-ade7-2cf3ae323d46
+		summarizeBy: sum
+		sourceColumn: valor_total_c_descuento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-MX"}
+
+	partition BD_Ventas = m
+		mode: import
+		queryGroup: 'Modelo de Datos'
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\LENOVO\OneDrive\Documentos\Cursos Rubis\Rubis Master PBi\BC1_FPOWERBI\BC-Fundamentos_PowerBI\Desafio\AnÔÇálisis de ventas.xlsx"), null, true),
+				    BD_Sheet = Origen{[Item="BD",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(BD_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Tipos de Clientes", type text}, {"País", type text}, {"Produto", type text}, {"Valor Total", type number}, {"Descuento", type number}, {"Valor Total c/ Descuento", type number}, {"Costo Total", type number}, {"Utilidad", type number}, {"Fecha", type date}, {"Mes", type text}, {"Año", Int64.Type}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Tipos de Clientes", "tipo_cliente"}, {"País", "pais"}, {"Produto", "nombre_producto"}, {"Valor Total", "valor_total_qtdxpu"}, {"Descuento", "monto_descuento"}, {"Valor Total c/ Descuento", "valor_total_c_descuento"}, {"Costo Total", "costo_total_pu"}, {"Utilidad", "utilidad"}, {"Fecha", "fecha_venta"}, {"Mes", "mes"}, {"Año", "año"}}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"tipo_cliente", type text}, {"pais", type text}, {"nombre_producto", type text}, {"valor_total_qtdxpu", Currency.Type}, {"monto_descuento", Currency.Type}, {"valor_total_c_descuento", Currency.Type}, {"costo_total_pu", Currency.Type}, {"utilidad", Currency.Type}, {"fecha_venta", type date}, {"mes", type text}, {"año", Int64.Type}}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado1",{"tipo_cliente", "pais", "nombre_producto", "valor_total_qtdxpu", "monto_descuento", "valor_total_c_descuento", "costo_total_pu", "utilidad", "fecha_venta"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Otras columnas quitadas",{{"valor_total_qtdxpu", "valor_total"}, {"monto_descuento", "descuento"}, {"costo_total_pu", "costo_total"}}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Columnas con nombre cambiado1","Estados Unidos","USA",Replacer.ReplaceText,{"pais"}),
+				    #"Filas filtradas" = Table.SelectRows(#"Valor reemplazado", each true),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Filas filtradas",#date(2023, 1, 1),#date(2025, 1, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado2" = Table.ReplaceValue(#"Valor reemplazado1",#date(2023, 6, 1),#date(2025, 6, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado3" = Table.ReplaceValue(#"Valor reemplazado2",#date(2023, 12, 1),#date(2025, 12, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado4" = Table.ReplaceValue(#"Valor reemplazado3",#date(2023, 3, 1),#date(2025, 3, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado5" = Table.ReplaceValue(#"Valor reemplazado4",#date(2023, 7, 1),#date(2025, 7, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado6" = Table.ReplaceValue(#"Valor reemplazado5",#date(2023, 8, 1),#date(2025, 8, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado7" = Table.ReplaceValue(#"Valor reemplazado6",#date(2023, 9, 1),#date(2025, 9, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado8" = Table.ReplaceValue(#"Valor reemplazado7",#date(2022, 10, 1),#date(2024, 10, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado9" = Table.ReplaceValue(#"Valor reemplazado8",#date(2023, 2, 1),#date(2025, 2, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado10" = Table.ReplaceValue(#"Valor reemplazado9",#date(2022, 9, 1),#date(2024, 9, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado11" = Table.ReplaceValue(#"Valor reemplazado10",#date(2023, 10, 1),#date(2025, 10, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado12" = Table.ReplaceValue(#"Valor reemplazado11",#date(2022, 11, 1),#date(2024, 11, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado13" = Table.ReplaceValue(#"Valor reemplazado12",#date(2022, 12, 1),#date(2024, 12, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado14" = Table.ReplaceValue(#"Valor reemplazado13",#date(2023, 4, 1),#date(2025, 4, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado15" = Table.ReplaceValue(#"Valor reemplazado14",#date(2023, 5, 1),#date(2025, 5, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado16" = Table.ReplaceValue(#"Valor reemplazado15",#date(2023, 11, 1),#date(2025, 11, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Filas filtradas1" = Table.SelectRows(#"Valor reemplazado16", each true),
+				    #"Valor reemplazado17" = Table.ReplaceValue(#"Filas filtradas1",#date(2025, 1, 1),#date(2023, 1, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado18" = Table.ReplaceValue(#"Valor reemplazado17",#date(2025, 6, 1),#date(2023, 6, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado19" = Table.ReplaceValue(#"Valor reemplazado18",#date(2025, 3, 1),#date(2023, 3, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado20" = Table.ReplaceValue(#"Valor reemplazado19",#date(2025, 7, 1),#date(2023, 7, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado21" = Table.ReplaceValue(#"Valor reemplazado20",#date(2025, 8, 1),#date(2023, 8, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado22" = Table.ReplaceValue(#"Valor reemplazado21",#date(2025, 9, 1),#date(2023, 9, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado23" = Table.ReplaceValue(#"Valor reemplazado22",#date(2025, 12, 1),#date(2023, 12, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado24" = Table.ReplaceValue(#"Valor reemplazado23",#date(2025, 2, 1),#date(2023, 2, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado25" = Table.ReplaceValue(#"Valor reemplazado24",#date(2025, 10, 1),#date(2023, 10, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado26" = Table.ReplaceValue(#"Valor reemplazado25",#date(2025, 4, 1),#date(2023, 4, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado27" = Table.ReplaceValue(#"Valor reemplazado26",#date(2025, 5, 1),#date(2023, 5, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado28" = Table.ReplaceValue(#"Valor reemplazado27",#date(2025, 11, 1),#date(2023, 11, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado29" = Table.ReplaceValue(#"Valor reemplazado28",#date(2023, 1, 1),#date(2024, 1, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado30" = Table.ReplaceValue(#"Valor reemplazado29",#date(2024, 9, 1),#date(2025, 1, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado31" = Table.ReplaceValue(#"Valor reemplazado30",#date(2024, 10, 1),#date(2025, 2, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado32" = Table.ReplaceValue(#"Valor reemplazado31",#date(2024, 11, 1),#date(2025, 3, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado33" = Table.ReplaceValue(#"Valor reemplazado32",#date(2024, 12, 1),#date(2025, 4, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado34" = Table.ReplaceValue(#"Valor reemplazado33",#date(2023, 6, 1),#date(2024, 6, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado35" = Table.ReplaceValue(#"Valor reemplazado34",#date(2023, 12, 1),#date(2024, 12, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado36" = Table.ReplaceValue(#"Valor reemplazado35",#date(2023, 3, 1),#date(2024, 3, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado37" = Table.ReplaceValue(#"Valor reemplazado36",#date(2023, 7, 1),#date(2024, 7, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado38" = Table.ReplaceValue(#"Valor reemplazado37",#date(2023, 8, 1),#date(2024, 8, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado39" = Table.ReplaceValue(#"Valor reemplazado38",#date(2023, 9, 1),#date(2024, 9, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado40" = Table.ReplaceValue(#"Valor reemplazado39",#date(2023, 2, 1),#date(2024, 2, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado41" = Table.ReplaceValue(#"Valor reemplazado40",#date(2023, 10, 1),#date(2024, 10, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado42" = Table.ReplaceValue(#"Valor reemplazado41",#date(2023, 4, 1),#date(2024, 4, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado43" = Table.ReplaceValue(#"Valor reemplazado42",#date(2023, 5, 1),#date(2024, 5, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Valor reemplazado44" = Table.ReplaceValue(#"Valor reemplazado43",#date(2023, 11, 1),#date(2024, 11, 1),Replacer.ReplaceValue,{"fecha_venta"}),
+				    #"Filas filtradas2" = Table.SelectRows(#"Valor reemplazado44", each true)
+				in
+				    #"Filas filtradas2"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

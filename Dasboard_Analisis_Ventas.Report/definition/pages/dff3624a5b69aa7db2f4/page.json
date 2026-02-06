@@ -1,0 +1,146 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "dff3624a5b69aa7db2f4",
+  "displayName": "Detalle",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "345d9c0b43b72f761766",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BD_Ventas"
+              }
+            },
+            "Property": "pais"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "e01ed339a237ef97e927",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BD_Ventas"
+              }
+            },
+            "Property": "nombre_producto"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "62222e8eeeaf20e588d9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BD_Ventas"
+              }
+            },
+            "Property": "tipo_cliente"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BD_Ventas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "tipo_cliente"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Empresas Grandes'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "4d64b85dfaac6b5dc5c4",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "f431888e3a568f1d477f",
+        "boundFilter": "345d9c0b43b72f761766",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BD_Ventas"
+              }
+            },
+            "Property": "pais"
+          }
+        }
+      },
+      {
+        "name": "0f87fd2d82c532b5833e",
+        "boundFilter": "e01ed339a237ef97e927",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BD_Ventas"
+              }
+            },
+            "Property": "nombre_producto"
+          }
+        }
+      },
+      {
+        "name": "214a98917ea0c65a262c",
+        "boundFilter": "62222e8eeeaf20e588d9",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BD_Ventas"
+              }
+            },
+            "Property": "tipo_cliente"
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "type": "Drillthrough"
+}

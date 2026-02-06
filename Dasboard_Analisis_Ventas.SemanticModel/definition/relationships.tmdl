@@ -1,0 +1,4 @@
+relationship 7b485add-3b05-eebc-79c7-2d487c796e2e
+	fromColumn: BD_Ventas.fecha_venta
+	toColumn: DimCalendario.fecha
+

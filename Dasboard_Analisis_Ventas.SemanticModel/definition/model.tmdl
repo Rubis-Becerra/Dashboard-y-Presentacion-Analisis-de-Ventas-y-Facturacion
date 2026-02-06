@@ -1,0 +1,30 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-MX
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Tablas o consultas obtenidas de forma nativa.
+queryGroup Consultas
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Tablas tratadas
+queryGroup 'Modelo de Datos'
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation PBI_QueryOrder = ["BD","BD_Ventas","Tabla Medidas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table BD_Ventas
+ref table DimCalendario
+ref table 'Tabla Medidas'
+
+ref cultureInfo es-MX
+
