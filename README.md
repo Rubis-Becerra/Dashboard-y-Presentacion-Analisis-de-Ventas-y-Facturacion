@@ -27,14 +27,6 @@ Análisis de Ventas para XSales una empresa presente en 5 países con sedes fís
 - **GitHub**: documentación y portfolio.
 
 ---
-### 📸 Views
-#### Dashboard
-![Vista General](Dash_views/Dash.png)
-
-#### Presentación Estrategias para 2° Cuat./2025 – Análisis de Resultados de Ventas
-![Vista General](Dash_views/Presentacion.png)
-
----
 ### 📈 KPIs y Métricas Analizadas en el Dashboard
 - Facturación total.
 - Costos.
@@ -51,6 +43,14 @@ La presentación en PowerPoint traduce los resultados del dashboard en un lengua
 - Identificación de oportunidades de negocio.
 - Análisis de impacto esperado de cada acción propuesta.
 - Recomendaciones estratégicas priorizadas.
+
+---
+### 📸 Views
+#### Dashboard
+![Vista General](Dash_views/Dash.png)
+
+#### Presentación Estrategias para 2° Cuat./2025 – Análisis de Resultados de Ventas
+![Vista General](Dash_views/Presentacion.png)
 
 ---
 ### 👩🏻‍💼 Sobre mí
