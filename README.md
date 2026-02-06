@@ -7,7 +7,7 @@
 👉 https://github.com/Rubis-Becerra/Dashboard-y-Presentacion-Analisis-de-Ventas-y-Facturacion/blob/main/Dasboard_Analisis_Ventas.SemanticModel/definition/tables/Tabla%20Medidas.tmdl
 
 ### - Ver Presentación Ejecutiva en PowerPoint 
-👉 https://github.com/Rubis-Becerra/Dashboard-y-Presentacion-Analisis-de-Ventas-y-Facturacion/blob/main/Presentacion_Analisis_Ventas.pptx
+👉 https://github.com/Rubis-Becerra/Dashboard-y-Presentacion-Analisis-de-Ventas-y-Facturacion/blob/main/VER_Presentacion_Analisis_Ventas.pptx
 
 ---
 ### 🧠 Contexto del Proyecto
@@ -59,7 +59,7 @@ Mi enfoque combina análisis de datos con **visión de negocio y toma de decisio
 
 📫 **Contacto**
 - **LinkedIn**: *www.linkedin.com/in/rubis-becerra*
-- **Portfolio Power BI**: *(agregar link)*
+- **Portfolio**: *https://bit.ly/Portfolio_Repositorio_RB*
 - **GitHub**: *https://github.com/Rubis-Becerra/Dashboard-y-Presentacion-Analisis-de-Ventas-y-Facturacion*
 
 💼 **Abierta a oportunidades laborales en posiciones de Analista de Datos y Business Intelligence**.
